@@ -1,4 +1,4 @@
-from turtle import *
+import turtle
 from collections import deque
 len = 600
 stX = -250
@@ -6,26 +6,26 @@ stY = -250
 
 #スタート地点に戻る
 def setHome():
-    setheading(0)
-    penup()
-    setposition(stX,stY)
-    pendown()
+    t.setheading(0)
+    t.penup()
+    t.setposition(stX,stY)
+    t.pendown()
 #指定した場所に移動して方向を水平に変更
 def setXY(x,y):
-    setheading(0)
-    penup()
-    setposition(x,y)
-    pendown()
+    t.setheading(0)
+    t.penup()
+    t.setposition(x,y)
+    t.pendown()
 
 #最初に一度だけ描く大きい三角形
 def drawBigTri(l):
     setHome()
-    fillcolor('green')
-    begin_fill()
+    t.fillcolor('green')
+    t.begin_fill()
     for _ in range(3):
-        fd(l)
-        rt(240)
-    end_fill()
+        t.fd(l)
+        t.rt(240)
+    t.end_fill()
 
 #再帰で小さい三角形を描画
 def drawTri(l):
@@ -37,25 +37,28 @@ def drawTri(l):
         qq.append(q)
     for q in qq:
         setXY(q[0],q[1])
-        fd(l)
-        rt(300)
-        Q.append(list(position()))
-        fillcolor('white')
-        begin_fill()
+        t.fd(l)
+        t.rt(300)
+        Q.append(list(t.position()))
+        t.fillcolor('white')
+        t.begin_fill()
         for i in range(3):
-            if i == 2: Q.append(list(position()))
-            fd(l)
-            rt(240)
-        end_fill()
+            if i == 2: Q.append(list(t.position()))
+            t.fd(l)
+            t.rt(240)
+        t.end_fill()
     drawTri(l)
 
 # n回に一回しかアニメーションを更新しない -> 早くなる
-s = Screen()
+
+t = turtle.Turtle()
+s = turtle.Screen()
 s.tracer(8)
 
-speed(0)
+t.speed(0)
 drawBigTri(len)
 Q = deque()
 Q.append([stX,stY])
 drawTri(len)
-done()
+
+turtle.done()
