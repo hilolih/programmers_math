@@ -1,0 +1,20 @@
+P126 階乗、順列、組み合わせ
+---------------------
+
+https://cdnjs.cloudflare.com/をブラウザで開いて、コンソールで以下を読み込む
+> var ele = document.createElement("script");
+> ele.type = "text/javascript";
+> ele.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.1/math.min.js";
+> document.body.appendChild(ele);  
+
+階乗 3!
+> math.factorial(3)
+6
+
+順列組み合わせ 4P2
+> math.permutations(4,2)
+12
+
+組み合わせ 4C2
+> math.combinations(4,2)
+6

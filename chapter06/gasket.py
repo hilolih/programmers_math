@@ -10,7 +10,7 @@ def setXY(x,y):
 
 #最初に一度だけ描く大きい三角形
 def drawBigGreenTri(l=600):
-  t.fillcolor('green')
+  t.fillcolor('red')
   t.begin_fill()
   for _ in range(3):
     t.forward(l)
@@ -18,7 +18,7 @@ def drawBigGreenTri(l=600):
   t.end_fill()
 
 #再帰で小さい三角形を描画
-def drawTri(l=600, limit=5):
+def drawTri(l=600, limit=2):
   l /= 2
   # 三角形の辺が一定のサイズ以下になったら終了
   if l < limit:
@@ -51,7 +51,7 @@ t = turtle.Turtle()
 s = turtle.Screen()
 # n回に一回しかアニメーションを更新しない -> 早くなる
 s.tracer(8)
-t.speed(0)
+t.speed(5)
 
 t.setheading(0)
 t.penup()
@@ -64,8 +64,8 @@ drawBigGreenTri()
 Q = deque()
 Q.append([stX,stY])
 
-# 逆三角形はすべて白
-t.fillcolor('white')
+# 逆三角形
+t.fillcolor('black')
 drawTri()
 
 turtle.done()
