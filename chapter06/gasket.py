@@ -1,5 +1,9 @@
 import turtle
 from collections import deque
+# 
+# シェルピンスキーのギャスケット(P172)
+# <参考> https://masutomo.hatenablog.com/entry/2020/01/17/004114
+# 
 
 #指定した場所に移動して方向を水平に変更
 def setXY(x,y):

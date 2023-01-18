@@ -1,8 +1,10 @@
 import turtle
-
+# 
+# 再帰的な図形を書く(P169)
+# 
 def drawtree(n,angles=15,distance=30):
   """
-  再帰的な図形を書く(P169)
+  再帰的な図形を書く
   args:
     n 再帰回数
     angles 枝の角度。degrees指定

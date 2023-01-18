@@ -1,3 +1,6 @@
+# 
+# 組み合わせの再帰的定義（P163）
+# 
 def c(n,k):
   if n == k or k == 0 :
     return 1

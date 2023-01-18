@@ -1,3 +1,8 @@
+repl
+====
+
+chromeのdeveloper consoleなどで確認。
+
 P67
 ---
 

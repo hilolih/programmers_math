@@ -1,4 +1,5 @@
 import sys
+# ハノイの塔を解くプログラム（P153）
 def hanoi(n, x, y, z):
   if n != 0:
     hanoi(n-1, x, z, y)

@@ -1,3 +1,6 @@
+# 
+# フィボナッチ数列（P161）
+# 
 def fibonacci(n):
   if n == 0:
     return 0
